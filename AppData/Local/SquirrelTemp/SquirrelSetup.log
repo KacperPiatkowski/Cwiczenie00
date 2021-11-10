@@ -1,0 +1,70 @@
+﻿2021-02-10 13:29:09> Program: Starting Squirrel Updater: --install . --exeName=Teams_windows_x64.exe
+2021-02-10 13:29:09> Program: setup.json does not exist
+2021-02-10 13:29:09> Program: Starting install, writing to C:\Users\Kacper\AppData\Local\SquirrelTemp
+2021-02-10 13:29:09> Program: File does not contain contextual info: Teams_windows_x64.exe
+2021-02-10 13:29:09> UpdateManager: using rootAppDirectory: C:\Users\Kacper\AppData\Local\Microsoft\Teams
+2021-02-10 13:29:09> Program: About to install to: C:\Users\Kacper\AppData\Local\Microsoft\Teams
+2021-02-10 13:29:09> Program: Setup.json exist, copying over
+2021-02-10 13:29:09> RegistryService: RegKeyExists: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run does not have TeamsMachineInstaller
+2021-02-10 13:29:09> Program: CheckMsiAndTryAddInstallSource: Not MSI, no need to add HKEY_CURRENT_USER\Software\Microsoft\Office\Teams\InstallSource
+2021-02-10 13:29:09> CheckForUpdateImpl: Couldn't write out staging user ID, this user probably shouldn't get beta anything: System.IO.DirectoryNotFoundException: Nie można odnaleźć części ścieżki „C:\Users\Kacper\AppData\Local\Microsoft\Teams\packages\.betaId”.
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   w System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   w System.IO.File.WriteAllText(String path, String contents, Encoding encoding)
+   w Squirrel.UpdateManager.CheckForUpdateImpl.getOrCreateStagedUserId()
+2021-02-10 13:29:09> CheckForUpdateImpl: Failed to load local releases, starting from scratch: System.IO.DirectoryNotFoundException: Nie można odnaleźć części ścieżki „C:\Users\Kacper\AppData\Local\Microsoft\Teams\packages\RELEASES”.
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   w Squirrel.Utility.LoadLocalReleases(String localReleaseFile)
+   w Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__3.MoveNext()
+2021-02-10 13:29:09> CheckForUpdateImpl: Reading RELEASES file from C:\Users\Kacper\AppData\Local\SquirrelTemp
+2021-02-10 13:29:10> CheckForUpdateImpl: First run or local directory is corrupt, starting from scratch
+2021-02-10 13:29:10> ApplyReleasesImpl: No delta packages found. Applying current release package.
+2021-02-10 13:29:10> ApplyReleasesImpl: getting squirrel aware apps failed with exception Nie można odnaleźć części ścieżki „C:\Users\Kacper\AppData\Local\Microsoft\Teams\current”.
+2021-02-10 13:29:10> ApplyReleasesImpl: Writing files to app directory: C:\Users\Kacper\AppData\Local\Microsoft\Teams\current
+2021-02-10 13:29:14> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\Kacper\AppData\Local\Microsoft\Teams\current\Teams.exe]
+2021-02-10 13:29:17> ApplyReleasesImpl: About to RemoveOldShorcuts for Teams.exe, rootAppDir C:\Users\Kacper\AppData\Local\Microsoft\Teams
+2021-02-10 13:29:17> RegistryService: RegKeyExists: HKEY_CURRENT_USER\Software\Policies\Microsoft\Cloud\Office\16.0\Teams does not exist
+2021-02-10 13:29:17> ApplyReleasesImpl: Registry value Software\Policies\Microsoft\Cloud\Office\16.0\Teams\PreventFirstLaunchAfterInstall does not exist
+2021-02-10 13:29:17> RegistryService: RegKeyExists: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Teams does not exist
+2021-02-10 13:29:17> ApplyReleasesImpl: Registry value Software\Policies\Microsoft\Office\16.0\Teams\PreventFirstLaunchAfterInstall does not exist
+2021-02-10 13:29:17> RegistryService: RegKeyExists: HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Teams does not exist
+2021-02-10 13:29:17> ApplyReleasesImpl: Registry value Software\Microsoft\Office\16.0\Teams\PreventFirstLaunchAfterInstall does not exist
+2021-02-10 13:29:17> ApplyReleasesImpl: Registry flags are not set: proceed with default value NotConfigured
+2021-02-10 13:29:17> ApplyReleasesImpl: Starting fixPinnedExecutables
+2021-02-10 13:29:17> ApplyReleasesImpl: Examining Pin: File Explorer.lnk
+2021-02-10 13:29:17> ApplyReleasesImpl: Examining Pin: Przeglądarka Opera GX.lnk
+2021-02-10 13:29:17> ApplyReleasesImpl: Fixing up tray icons
+2021-02-10 13:29:17> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Odwołanie do obiektu nie zostało ustawione na wystąpienie obiektu.
+   w Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__24_0(RegistryView view)
+2021-02-10 13:29:17> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Odwołanie do obiektu nie zostało ustawione na wystąpienie obiektu.
+   w Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__24_0(RegistryView view)
+2021-02-10 13:29:17> MeetingAddinInstaller: System.ArgumentException: Nie można usunąć drzewa podklucza, ponieważ podklucz nie istnieje.
+   w System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   w Microsoft.Win32.RegistryKey.DeleteSubKeyTree(String subkey, Boolean throwOnMissingSubKey)
+   w Microsoft.Win32.RegistryKey.DeleteSubKeyTree(String subkey)
+   w Squirrel.MeetingAddinInstaller.<InstallMeetingAddinAsync>d__15.MoveNext()
+2021-02-10 13:29:17> MeetingAddinInstaller: StagedAppDirectory does not exist. Using Current
+2021-02-10 13:29:17> MeetingAddinInstaller: There is no version.txt. Falling back to getting version from folder name
+2021-02-10 13:29:17> MeetingAddinInstaller: Version: 1.0.20289.5; addinPackageDirectory: 1.0.20289.5
+2021-02-10 13:29:17> MeetingAddinInstaller: .dead exists: False
+2021-02-10 13:29:17> MeetingAddinInstaller: path to .dead: C:\Users\Kacper\AppData\Local\Microsoft\TeamsMeetingAddin\1.0.20289.5\.dead
+2021-02-10 13:29:17> MeetingAddinInstaller: before cleanup unused versions
+2021-02-10 13:29:18> MeetingAddinInstaller: Addin directory exists. Copy was successful
+2021-02-10 13:29:18> MeetingAddinInstaller: Version 1.0.20289.5 of the meeting add-in is now installed
+2021-02-10 13:29:18> PresenceAddinInstaller: Installing Teams Presence addin for Outlook...
+2021-02-10 13:29:18> PresenceAddinInstaller: Copying C:\Users\Kacper\AppData\Local\Microsoft\Teams\current\resources\assets\tlb\Uc.tlb to C:\Users\Kacper\AppData\Local\Microsoft\TeamsPresenceAddin
+2021-02-10 13:29:18> PresenceAddinInstaller: Copying C:\Users\Kacper\AppData\Local\Microsoft\Teams\current\resources\assets\tlb\Uc.win32.tlb to C:\Users\Kacper\AppData\Local\Microsoft\TeamsPresenceAddin
+2021-02-10 13:29:18> PresenceAddinInstaller: check if UC TypeLib points to current\resources\assets\tlb\Uc.tlb
+2021-02-10 13:29:18> PresenceAddinInstaller: Registering UC Typelib WIN32 under HKCU...
+2021-02-10 13:29:18> PresenceAddinInstaller: UC Typelib WIN32 successfully registered to C:\Users\Kacper\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb under HKCU!
+2021-02-10 13:29:18> PresenceAddinInstaller: Registering UC Typelib WIN64 under HKCU...
+2021-02-10 13:29:18> PresenceAddinInstaller: UC Typelib WIN64 successfully registered to C:\Users\Kacper\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb under HKCU!
+2021-02-10 13:29:18> ApplyReleasesImpl: cleanDeadVersions: for original version of  and current version of 1.4.00.2879
+2021-02-10 13:29:18> ApplyReleasesImpl: cleanDeadVersions: exclude current folder stage
+2021-02-10 13:29:19> RegistryService: TryDeleteRegKey: HKEY_CURRENT_USER\Software\Microsoft\Office\Teams not found
